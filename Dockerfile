@@ -7,7 +7,7 @@ WORKDIR ~
 RUN apt-get update \
 	&& apt-get install -y --force-yes --no-install-recommends \
 		ca-certificates build-essential \
-                libpng12-dev libfreetype6-dev \
+                libpng12-dev libfreetype6-dev pkg-config \
                 python3 python3-dev python3-pip \
 	&& rm -rf /var/lib/apt/lists/* \
         && ln -s /usr/bin/python3 /usr/bin/python \
