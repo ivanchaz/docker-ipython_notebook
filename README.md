@@ -6,6 +6,7 @@ these packages installed :
 - ca-certificates
 - pkg-config
 - build-essential
+- gfortran
 - libopenblas-dev 
 - liblapack-dev
 - libpng12-dev 
