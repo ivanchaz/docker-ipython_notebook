@@ -24,7 +24,7 @@ And also, these python packages will be installed :
 
 # How To Use
 1. install [docker](https://www.docker.com)
-2. run command `docker pull ivanchaz/python_notebook`
+2. run command `docker pull ivanchaz/ipython_notebook`
 
 ### TODO
 1. create a script to automatically login to dropbox account
