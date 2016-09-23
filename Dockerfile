@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER ivan.chaz@gmail.com
 
-WORKDIR ~
+WORKDIR /root
 
 RUN apt-get update \
 	&& apt-get install -y --force-yes --no-install-recommends \
@@ -18,10 +18,10 @@ RUN apt-get update \
 
 RUN wget -O dropbox.tar.gz "https://www.dropbox.com/download?plat=lnx.x86_64" \
         && tar -xzf dropbox.tar.gz \
-        && rm dropbox.tar.gz \
-        && ./.dropbox-dist/dropboxd &
+        && rm dropbox.tar.gz
  
 RUN apt-get purge -y build-essential wget gfortran
 
 EXPOSE 8888
-CMD ["jupyter","notebook"]
+ADD start.sh ./
+CMD ./start.sh
