@@ -23,5 +23,7 @@ RUN wget -O dropbox.tar.gz "https://www.dropbox.com/download?plat=lnx.x86_64" \
 RUN apt-get purge -y build-essential wget gfortran
 
 EXPOSE 8888
+
 ADD start.sh ./
+RUN sed -i "s///" ./start.sh
 CMD ./start.sh
