@@ -25,5 +25,7 @@ RUN apt-get purge -y build-essential wget gfortran
 EXPOSE 8888
 
 ADD start.sh ./
-RUN sed -i "s///" ./start.sh
+RUN sed -i "s///" ./start.sh \
+       && chmod a+x ./start.sh
+
 CMD ./start.sh
