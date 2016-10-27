@@ -21,6 +21,7 @@ And also, these python packages will be installed :
 - scipy
 - numpy
 - sklearn 
+- panda
 
 # How To Use
 1. install [docker](https://www.docker.com)
