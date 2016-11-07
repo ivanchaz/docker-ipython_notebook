@@ -12,7 +12,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/* \
         && ln -s /usr/bin/python3 /usr/bin/python \
         && chmod +x /usr/bin/python \
-        && pip3 install jupyter matplotlib numpy scipy sklearn pandas \ 
+        && pip3 install jupyter matplotlib numpy scipy sklearn cython pandas \ 
         && jupyter notebook --generate-config \
         && sed -i "s/.*c.NotebookApp.ip.*/c.NotebookApp.ip = '*'/" ~/.jupyter/jupyter_notebook_config.py
 
